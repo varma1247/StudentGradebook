@@ -1,77 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sign Up</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-<style type="text/css">
-	.login-form {
-		width: 340px;
-    	margin: 50px auto;
-	}
-    .login-form form {
-    	margin-bottom: 15px;
-        background: #f7f7f7;
-        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-        padding: 30px;
-    }
-    .login-form h2 {
-        margin: 0 0 15px;
-    }
-    .form-control, .btn {
-        min-height: 38px;
-        border-radius: 2px;
-    }
-    .btn {        
-        font-size: 15px;
-        font-weight: bold;
-    }
-    input{
-        text-align: center;
-        border-radius: 10px;
-    }
-    label{
-        font-weight: normal
-    }
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+        .login-form {
+            width: 340px;
+            margin: 50px auto;
+        }
+
+        .login-form form {
+            margin-bottom: 15px;
+            background: #f7f7f7;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        .login-form h2 {
+            margin: 0 0 15px;
+        }
+
+        .form-control,
+        .btn {
+            min-height: 38px;
+            border-radius: 2px;
+        }
+
+        .btn {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        label {
+            font-weight: normal
+        }
+    </style>
 </head>
+
 <body style="background-color: lightseagreen">
-<div class="login-form" style="margin-top: 120px; box-shadow: darkslategray 10px 5px;">
-    <form action="signup.php" class="text-center" method="post" id="signup">
-        <h3 class="text-center">Sign Up</h3>
-        <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" required="required" name="email" id='email'>
-        </div>       
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Firstname" required="required" name="firstname" id='firstname'>
-        </div>
-        <div class="form-group">
-                <input type="text" class="form-control" placeholder="Lastname" required="required" name="lastname" id='lastname'>
+    <div class="login-form" style="margin-top: 120px;">
+        <form action="signup.php" class="text-center" method="post" id="signup">
+            <h3 class="text-center">Sign Up</h3>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" required="required" name="email"
+                    id='email'>
             </div>
             <div class="form-group">
-                    <input type="text" class="form-control" placeholder="ID" required="required" name="id" id='id'>
-                </div>
-        <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" required="required" name="password" id='password'>
-        </div>
-        <div class="form-group">
-                <input type="password" class="form-control" placeholder="Confirm Password" required="required" name="confirmPassword" id='confirmPassword'>
+                <input type="text" class="form-control" placeholder="Firstname" required="required" name="firstname"
+                    id='firstname'>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Lastname" required="required" name="lastname"
+                    id='lastname'>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="ID" required="required" name="id" id='id'>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" required="required" name="password"
+                    id='password'>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirm Password" required="required"
+                    name="confirmPassword" id='confirmPassword'>
             </div>
             <div class="form-group text-center">
-                    <label for="">UserType:&nbsp&nbsp</label>
-                    <select name="userType" id=""><option value="student">Student</option><option value="professor">professor</option></select>
-                </div>      
-        <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-        </div> 
-    </form>
-</div>
-<div class="text-center"><h3 id="msg" style="color:green"></h3></div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
-<script src="signup.js"></script>
+                <label for="">UserType:&nbsp&nbsp</label>
+                <select name="userType" id="">
+                    <option value="student">Student</option>
+                    <option value="professor">professor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </div>
+        </form>
+        <p class="text-center" id="login" style="cursor:pointer">Login</p>
+    </div>
+    <div class="text-center">
+        <h3 id="msg" style="color:#337ab7;"></h3>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.0/dist/jquery.validate.js"></script>
+    <script src="signup.js"></script>
 </body>
-</html>                                		                            
+
+</html>

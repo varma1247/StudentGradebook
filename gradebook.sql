@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 23, 2019 at 12:40 PM
+-- Generation Time: Apr 23, 2019 at 01:12 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -38,7 +38,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`email`, `password`) VALUES
-('saivarma@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
+('saivarma@gmail.com', 'a283d5b8093e301cdc47fc10debf014b');
 
 -- --------------------------------------------------------
 
@@ -81,7 +81,7 @@ CREATE TABLE `grades` (
 --
 
 INSERT INTO `grades` (`studentid`, `courseid`, `year`, `semester`, `grade`, `professorid`) VALUES
-('1001669341', 'CSE5301', '2019', 'Spring', 'E', '1234567899');
+('1001669341', 'CSE5301', '2019', 'Spring', 'A', '1234567899');
 
 -- --------------------------------------------------------
 
