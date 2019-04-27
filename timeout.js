@@ -18,5 +18,5 @@ var timeout=setInterval(function () {
     if(sessionexpired=="yes"){
         clearInterval(timeout);
     }
-},240000);
+},35000);
 });

@@ -62,12 +62,12 @@ if (isset($_POST['email'])&& isset($_POST['password'])){
             echo "nouser";
         }
     }
-    else if($usertype=='admin'){
+    elseif ($usertype=="admin") {
         try{
-        $stmt1=$conn->prepare("SELECT * FROM admin WHERE email=? AND password=?");
-        $stmt1->bind_param("ss",$email,$password);
-        $stmt1->execute();
-        $result=$stmt1->get_result();
+            $stmt1=$conn->prepare("SELECT * FROM admin WHERE email=? AND password=?");
+            $stmt1->bind_param("ss",$email,$password);
+            $stmt1->execute();
+            $result=$stmt1->get_result();
         }
         catch( mysqli_sql_exception $e )
         {
@@ -75,12 +75,13 @@ if (isset($_POST['email'])&& isset($_POST['password'])){
             die;
         }
         if($result->num_rows>0){
-                $_SESSION['user']=$result['id'].srand(rand(101,999));
-                echo "3";    
+            $result=$result->fetch_assoc();
+            $_SESSION['user']=$result['email'].srand(rand(101,999));
+            echo "3";  
         }
-    }
-    else{
-        echo "nouser";
+        else{
+            echo "nouser";
+        }
     }
 }
 }
