@@ -1,6 +1,7 @@
 <?php
-session_start();
+// session_start();
 include "conn.php";
+include "to.php";
 if (isset($_SESSION['user'])){
 $id=substr($_SESSION['user'],0,10);
 try{
@@ -154,5 +155,6 @@ else{
         });
     </script>
     <script src='logout.js'></script>
+    <script src='timeout.js'></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ $(document).ready(function () {
         }
         if (!passwordregex.test(password)) {
             $("#msg").html('');
-            $("#msg").text("Incorrect Password");
+            $("#msg").text("Invalid Password");
 
         }
         if (emailregex.test(email) && passwordregex.test(password)) {

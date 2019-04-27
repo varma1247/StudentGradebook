@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 23, 2019 at 01:12 PM
+-- Generation Time: Apr 28, 2019 at 12:18 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -81,7 +81,7 @@ CREATE TABLE `grades` (
 --
 
 INSERT INTO `grades` (`studentid`, `courseid`, `year`, `semester`, `grade`, `professorid`) VALUES
-('1001669341', 'CSE5301', '2019', 'Spring', 'A', '1234567899');
+('1001669341', 'CSE5301', '2019', 'Spring', 'B', '1234567899');
 
 -- --------------------------------------------------------
 
@@ -129,6 +129,7 @@ INSERT INTO `student` (`email`, `firstname`, `lastname`, `password`, `id`, `appr
 ('jghhhvh@vv.ocm', 'hjhj17816', 'jgjbsjhbhj', 'a283d5b8093e301cdc47fc10debf014b', '1001669811', 0),
 ('jughg@yfgf.dxjb', 'gfgtdfgd', 'fgdgfd', 'edb79d45e6a839b6c8b7fbf0ae94b903', '1001778187', 0),
 ('saiva10@gmail.com', 'Satfgg', 'gcgcg', 'a283d5b8093e301cdc47fc10debf014b', '1001777654', 0),
+('saivarma10@fdfd.bgn', 'fdgdcgd', 'dsfsf', 'a283d5b8093e301cdc47fc10debf014b', '1001556754', 0),
 ('saivarma10@gmail.com', 'saivarma', 'raghavaraju', 'a283d5b8093e301cdc47fc10debf014b', '1001669341', 1),
 ('saivarma11@gmail.com', 'GDFGDggDGDG', 'gdggdg', 'a283d5b8093e301cdc47fc10debf014b', '1001998272', 0),
 ('sasaff@ffc.xn', 'hvhvh', 'hvvhvh', 'a283d5b8093e301cdc47fc10debf014b', '1001777611', 0),

@@ -24,7 +24,7 @@ if (isset($_POST['email'])&& isset($_POST['password'])){
         if($result->num_rows>0){
             $result=$result->fetch_assoc();
            if($result['approved']=='1'){
-            $_SESSION['user']=$result['id'].rand(101,999);
+            $_SESSION['user']=$result['id'].srand(rand(101,999));
             echo "1";
             }
             else {
@@ -51,7 +51,7 @@ if (isset($_POST['email'])&& isset($_POST['password'])){
         if($result->num_rows>0){
             $result=$result->fetch_assoc();
             if($result['approved']=='1'){
-            $_SESSION['user']=$result['id'].rand(101,999);
+            $_SESSION['user']=$result['id'].srand(rand(101,999));
             echo "2";
             }
             else {
@@ -75,7 +75,7 @@ if (isset($_POST['email'])&& isset($_POST['password'])){
             die;
         }
         if($result->num_rows>0){
-                $_SESSION['user']=rand(101,999);
+                $_SESSION['user']=$result['id'].srand(rand(101,999));
                 echo "3";    
         }
     }
